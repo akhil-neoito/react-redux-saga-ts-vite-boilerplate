@@ -1,15 +1,12 @@
-import { useState } from 'react';
-import './App.css'
-import Button from './components/Button';
+import './App.css';
 import Header from './components/Header';
+import Router from './routes';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App font-mono">
+    <div className="App font-mono h-screen">
       <Header />
-      <Button text="Increment" onClick={() => setCount(count + 1)} />
+      <Router />
     </div>
   );
 }
