@@ -1,5 +1,5 @@
-//
 export type Maybe<T> = T | null | undefined;
+export type Nullable<T> = T | null;
 
 
 // Used to override default function signatures from packages

@@ -1,18 +1,17 @@
-import { useState } from 'react';
+import authSlice from '../../redux/slices/auth.slice';
 import Button from '../../components/Button';
+import { useAppDispatch } from '../../hooks/redux';
 
 const Home = () => {
-  const [count, setCount] = useState(0);
+  const dispatch = useAppDispatch();
 
   const login = () => {
-    console.log('login');
+    dispatch(authSlice.actions.login());
   };
 
   return (
-    <div>
-      <div>Count: {count}</div>
-      <Button text="Increment" onClick={() => setCount(count + 1)} />
-      <Button text="Login" onClick={login} />
+    <div className="h-screen flex items-center justify-center">
+      <Button text="Dummy Login" onClick={login} />
     </div>
   );
 };

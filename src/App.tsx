@@ -1,13 +1,17 @@
-import './App.css';
+import { Provider } from 'react-redux';
 import Header from './components/Header';
 import Router from './routes';
+import store from './redux/store';
+import './App.css';
 
 function App() {
   return (
-    <div className="App font-mono h-screen">
-      <Header />
-      <Router />
-    </div>
+    <Provider store={store}>
+      <div className="App font-mono h-screen">
+        <Header />
+        <Router />
+      </div>
+    </Provider>
   );
 }
 

@@ -1,14 +1,16 @@
 import type { ReactElement } from 'react';
 import { Navigate } from 'react-router';
+import { useAppSelector } from '../hooks/redux';
 
 interface Props {
   children: ReactElement;
 }
 
 const PublicRoute: React.FC<Props> = ({ children }) => {
-  const isAuth = true;
-  
-  return isAuth ? <Navigate to="/articles" /> : children;
+  // Replace with your auth condition
+  const { isAuthenticated } = useAppSelector((state) => state.auth);
+
+  return isAuthenticated ? <Navigate to="/articles" /> : children;
 };
 
 export default PublicRoute;
