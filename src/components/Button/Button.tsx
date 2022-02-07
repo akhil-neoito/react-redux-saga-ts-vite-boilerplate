@@ -2,7 +2,7 @@ import Spinner from '../Spinner';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text?: string;
+  text: string;
   isLoading?: boolean;
   className?: string;
   children?: React.ReactNode;
