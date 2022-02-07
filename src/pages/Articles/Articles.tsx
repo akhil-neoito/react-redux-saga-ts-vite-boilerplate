@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { GET_ARTICLES } from '../../redux/actions/articles.action';
 import useLoading from '../../hooks/useLoading';
 import useDebounce from '../../hooks/useDebounce';
+import { formatDate } from '../../lib/helper';
 
 const Article = () => {
   const { articles } = useAppSelector((state) => state.articles);
@@ -30,11 +31,18 @@ const Article = () => {
 
             <header className="flex items-center justify-between leading-tight p-2 md:p-4">
               <h1 className="text-lg">
-                <a className="no-underline hover:underline text-black" href="#">
+                <a
+                  className="no-underline hover:underline text-black"
+                  href={article.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {article.title}
                 </a>
               </h1>
-              <p className="text-grey-darker text-sm">{article.publishedAt}</p>
+              <p className="text-grey-darker text-sm">
+                {formatDate(article.publishedAt)}
+              </p>
             </header>
 
             <footer className="flex items-center justify-between leading-none p-2 md:p-4">
