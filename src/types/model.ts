@@ -1,4 +1,4 @@
-import { Article } from '../redux/types/articles.type';
+import { Article } from '@/store/types/articles.type';
 
 export interface GetArticleResponse {
   status: string;

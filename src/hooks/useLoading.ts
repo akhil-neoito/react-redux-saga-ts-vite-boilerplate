@@ -1,10 +1,7 @@
-import { useSelector } from 'react-redux';
-import type { RootState } from '../redux/store';
+import { useAppSelector } from './redux';
 
 const useLoading = (action: string): boolean => {
-  const loadingState = useSelector(
-    (state: RootState) => state.loader.loadingActions
-  );
+  const loadingState = useAppSelector((state) => state.loader.loadingActions);
 
   return loadingState.includes(action);
 };

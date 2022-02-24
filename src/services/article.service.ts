@@ -2,7 +2,7 @@ import axios from 'axios';
 import { newsApiKey } from '../lib/config';
 import { GeneratorResponse } from '../types/api';
 import { GetArticleResponse } from '../types/model';
-import type { GetArticlesProps } from '../redux/types/articles.type';
+import type { GetArticlesProps } from '@/store/types/articles.type';
 
 export function* getArticles(
   params: GetArticlesProps
