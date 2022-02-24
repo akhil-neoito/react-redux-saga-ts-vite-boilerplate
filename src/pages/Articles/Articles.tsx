@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import articlesSlice from '../../redux/slices/articles.slice';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { GET_ARTICLES } from '../../redux/actions/articles.action';
-import useLoading from '../../hooks/useLoading';
-import useDebounce from '../../hooks/useDebounce';
+import articlesSlice from '@/store/slices/articles.slice';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import { GET_ARTICLES } from '@/store/actions/articles.action';
+import useLoading from '@/hooks/useLoading';
+import useDebounce from '@/hooks/useDebounce';
 import { formatDate } from '../../lib/helper';
 
 const Article = () => {

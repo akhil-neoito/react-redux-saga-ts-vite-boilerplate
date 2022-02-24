@@ -1,5 +1,5 @@
-import authSlice from '../../redux/slices/auth.slice';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import authSlice from '@/store/slices/auth.slice';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import Button from '../Button';
 
 const Header = () => {
