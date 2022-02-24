@@ -1,5 +1,7 @@
+import { VoidGenerator } from '@/types';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { put, takeEvery } from 'redux-saga/effects';
+import type { PutEffect } from 'redux-saga/effects';
 import { getArticles } from '../../services/article.service';
 import { GetArticleResponse } from '../../types/model';
 import { GET_ARTICLES } from '../actions/articles.action';
@@ -7,11 +9,17 @@ import articlesSlice from '../slices/articles.slice';
 import authSlice from '../slices/auth.slice';
 import loaderSlice from '../slices/loader.slice';
 import { GetArticlesProps } from '../types/articles.type';
+import type { GeneratorResponse } from 'src/types/api';
 
-function* getArticlesSaga(action: PayloadAction<GetArticlesProps>) {
+function* getArticlesSaga(
+  action: PayloadAction<GetArticlesProps>
+): VoidGenerator<
+  PutEffect | GeneratorResponse<GetArticleResponse>,
+  GetArticleResponse
+> {
   try {
     yield put(loaderSlice.actions.startLoadingAction(GET_ARTICLES));
-    const res: GetArticleResponse = yield getArticles(action.payload);
+    const res = yield getArticles(action.payload);
     const { articles } = res;
     yield put(articlesSlice.actions.setArticles(articles));
     yield put(authSlice.actions.setIsAuthenticated(true));
