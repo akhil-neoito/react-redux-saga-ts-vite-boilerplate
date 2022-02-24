@@ -9,7 +9,8 @@
     "build": "tsc && npm run build:css && vite build",
     "preview": "vite preview",
     "lint": "eslint --ignore-path .eslintignore --ext .ts,.tsx .",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|tsx|json)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|tsx|json)\"",
+    "release": "standard-version"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
@@ -45,6 +46,7 @@
     "husky": "^7.0.4",
     "prettier": "^2.5.1",
     "sass": "^1.49.0",
+    "standard-version": "^9.3.2",
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
   }
