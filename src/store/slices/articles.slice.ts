@@ -7,7 +7,8 @@ const initialState: InitialState = {
 
 const getArticles = (
   state: InitialState,
-  action: PayloadAction<GetArticlesProps>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _action: PayloadAction<GetArticlesProps>
 ) => state;
 
 const setArticles = (
