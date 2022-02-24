@@ -1,6 +1,6 @@
 {
   "name": "react-redux-saga-ts-vite-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "npm run build:css && concurrently \"npm run watch:css\" \"npm run dev\"",
     "dev": "vite",
