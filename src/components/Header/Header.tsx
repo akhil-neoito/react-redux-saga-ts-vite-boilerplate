@@ -1,6 +1,6 @@
-import authSlice from '../../redux/slices/auth.slice';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import Button from '../Button';
+import authSlice from '@/store/slices/auth.slice';
+import { useAppDispatch, useAppSelector } from '@/hooks/useRedux';
+import Button from '@/components/Button';
 
 const Header = () => {
   const dispatch = useAppDispatch();

@@ -1,4 +1,4 @@
-import Spinner from '../Spinner';
+import Spinner from '@/components/Spinner';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

@@ -1,7 +1,9 @@
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header';
 import Router from './routes';
-import store from './redux/store';
+import store from '@/store/index';
 import './App.css';
 
 function App() {
@@ -11,6 +13,7 @@ function App() {
         <Header />
         <Router />
       </div>
+      <ToastContainer />
     </Provider>
   );
 }

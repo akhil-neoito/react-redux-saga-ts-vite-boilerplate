@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { InitialState } from '../../redux/types/auth.type';
+import { InitialState } from '@/store/types/auth.type';
+import { LoginBody } from '@/types/auth';
 
 const initialState: InitialState = {
   isAuthenticated: false,
 };
 
-const login = (state: InitialState) => state;
+const login = (state: InitialState, action: PayloadAction<LoginBody>) => state;
 
 const setIsAuthenticated = (
   state: InitialState,
