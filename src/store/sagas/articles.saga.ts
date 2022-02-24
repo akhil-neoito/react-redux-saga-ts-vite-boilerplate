@@ -3,7 +3,7 @@ import { put, takeEvery } from 'redux-saga/effects';
 import type { PutEffect } from 'redux-saga/effects';
 import { getArticles } from '@/services/article.service';
 import type { VoidGenerator } from '@/types/index';
-import type { GetArticleResponse } from '@/types/model';
+import type { GetArticleResponse } from '@/types/article';
 import type { GeneratorResponse } from '@/types/api';
 import { GET_ARTICLES } from '../actions/articles.action';
 import articlesSlice from '../slices/articles.slice';
