@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import articlesSlice from '@/store/slices/articles.slice';
-import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import { useAppDispatch, useAppSelector } from '@/hooks/useRedux';
 import { GET_ARTICLES } from '@/store/actions/articles.action';
 import useLoading from '@/hooks/useLoading';
 import useDebounce from '@/hooks/useDebounce';
-import { formatDate } from '../../lib/helper';
+import { formatDate } from '@/lib/helper';
 
 const Article = () => {
   const { articles } = useAppSelector((state) => state.articles);

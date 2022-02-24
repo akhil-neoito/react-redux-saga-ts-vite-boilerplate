@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import { Navigate } from 'react-router';
-import { useAppSelector } from '../hooks/redux';
+import { useAppSelector } from '@/hooks/useRedux';
 
 interface Props {
   children: ReactElement;

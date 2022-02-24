@@ -2,7 +2,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@/components/Button';
 import Input from '@/components/Input/Input';
-import { useAppDispatch } from '@/hooks/redux';
+import { useAppDispatch } from '@/hooks/useRedux';
 import useLoading from '@/hooks/useLoading';
 import { LOGIN } from '@/store/actions/auth.actions';
 import authSlice from '@/store/slices/auth.slice';

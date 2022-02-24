@@ -1,15 +1,15 @@
-import { VoidGenerator } from '@/types/index';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { put, takeEvery } from 'redux-saga/effects';
 import type { PutEffect } from 'redux-saga/effects';
-import { getArticles } from '../../services/article.service';
-import { GetArticleResponse } from '../../types/model';
+import { getArticles } from '@/services/article.service';
+import type { VoidGenerator } from '@/types/index';
+import type { GetArticleResponse } from '@/types/model';
+import type { GeneratorResponse } from '@/types/api';
 import { GET_ARTICLES } from '../actions/articles.action';
 import articlesSlice from '../slices/articles.slice';
 import authSlice from '../slices/auth.slice';
 import loaderSlice from '../slices/loader.slice';
 import { GetArticlesProps } from '../types/articles.type';
-import type { GeneratorResponse } from '@/types/api';
 
 function* getArticlesSaga(
   action: PayloadAction<GetArticlesProps>
