@@ -10,7 +10,8 @@ import type { AxiosResponse } from 'axios';
  * 
  * Change the type to the type of the data your backend returns.
  * 
- * For example, If your backend directly returns the data without wrapping it in an object,
+ * @example:
+ * If your backend directly returns the data without wrapping it in an object,
  * you can use the following snippet:
  * 
  * export type SuccessResponse<T> = T;
