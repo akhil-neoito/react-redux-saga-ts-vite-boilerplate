@@ -15,7 +15,7 @@ const configureStore = (preloadedState: RootState = {} as RootState) => {
   const sagaMiddleware = createSagaMiddleware();
   const middlewares: Middleware[] = [sagaMiddleware];
 
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.MODE === 'development') {
     middlewares.push(logger);
   }
 
